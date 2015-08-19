@@ -3,15 +3,13 @@ LightBus是基于微软Silverlight Out-of-Browser技术的微博客户端可支�
 项目分为两个版本：
 
 1. Silverlight Out-of-Browser版本(已完成)
-2. Windows 8 Store版本 (测试中)
+2. Windows 10版本 (测试中)
 
 源代码使用说明：
 
 LightBus项目是基于MIT协议下的开源项目，作者保留版权，而无任何其他限制，您必须在您的发行版里包含原许可协议的声明，无论是以二进制发布的还是以源代码发布。
 
-项目源代码在线查看： http://lightbus.codeplex.com/SourceControl/changeset
-
-项目开源主页： http://lightbus.codeplex.com/
+项目开源主页： https://github.com/jv9/lightbus/
 
 LightBus项目引用新浪微博Open API平台提供的SDK，在此感谢提供SDK的开发人员：sarlmolapple
 
@@ -50,7 +48,7 @@ QQ群：
 
 全屏浏览,一眼望穿
 
-overview
+
 
   
 
