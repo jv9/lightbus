@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57AB1778-8C78-40E5-B496-271E00A49A06}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SinaDesktop.Web</RootNamespace>
+    <AssemblyName>SinaDesktop.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SilverlightApplicationList>{1BEFFE1A-D78B-4B37-9FBB-ED172558BD6B}|..\SinaDesktop\SinaDesktop.csproj|ClientBin|False</SilverlightApplicationList>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientBin\SinaDesktop.xap" />
+    <Content Include="css\style.css" />
+    <Content Include="DefaultTest.aspx" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\2.jpg" />
+    <Content Include="images\3.jpg" />
+    <Content Include="images\4.jpg" />
+    <Content Include="images\5.jpg" />
+    <Content Include="images\6.jpg" />
+    <Content Include="images\7.jpg" />
+    <Content Include="images\8.jpg" />
+    <Content Include="images\arrow.png" />
+    <Content Include="images\box-bottom-bg.gif" />
+    <Content Include="images\box-middle-bg.gif" />
+    <Content Include="images\box-top-bg.gif" />
+    <Content Include="images\bullets.gif" />
+    <Content Include="images\contact-icon.gif" />
+    <Content Include="images\content-box-bottom.gif" />
+    <Content Include="images\dotted-line.gif" />
+    <Content Include="images\download.png" />
+    <Content Include="images\go-button.gif" />
+    <Content Include="images\header-bg.gif" />
+    <Content Include="images\header-bg.png" />
+    <Content Include="images\heading-img1.gif" />
+    <Content Include="images\heading-img2.gif" />
+    <Content Include="images\heading-img3.gif" />
+    <Content Include="images\hover-bullet.gif" />
+    <Content Include="images\ico-email.png" />
+    <Content Include="images\ico-fax.png" />
+    <Content Include="images\ico-med-1.png" />
+    <Content Include="images\ico-med-2.png" />
+    <Content Include="images\ico-med-3.png" />
+    <Content Include="images\ico-med-4.png" />
+    <Content Include="images\ico-phone.png" />
+    <Content Include="images\ico-support.png" />
+    <Content Include="images\ico-terms.png" />
+    <Content Include="images\ico-twitter.png" />
+    <Content Include="images\ico-website.png" />
+    <Content Include="images\ico1.png" />
+    <Content Include="images\ico2.png" />
+    <Content Include="images\ico3.png" />
+    <Content Include="images\ico4.png" />
+    <Content Include="images\ico5.png" />
+    <Content Include="images\ico6.png" />
+    <Content Include="images\icon1.png" />
+    <Content Include="images\icon2.jpg" />
+    <Content Include="images\icon3.gif" />
+    <Content Include="images\LightBus.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\mail-icon.gif" />
+    <Content Include="images\newsletter-bg.gif" />
+    <Content Include="images\Silverlight.jpg" />
+    <Content Include="images\snap.png" />
+    <Content Include="images\Support.jpg" />
+    <Content Include="images\text-bg.gif" />
+    <Content Include="images\time-icon.gif" />
+    <Content Include="images\top-links-dotted-line.gif" />
+    <Content Include="index.html" />
+    <Content Include="projects.html" />
+    <Content Include="Silverlight.js" />
+    <Content Include="Install.aspx" />
+    <Content Include="SinaDesktopTestPage.html" />
+    <Content Include="SinaService.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataMembers.cs" />
+    <Compile Include="DefaultTest.aspx.cs">
+      <DependentUpon>DefaultTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultTest.aspx.designer.cs">
+      <DependentUpon>DefaultTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IDataService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SilverlightFaultBehavior.cs" />
+    <Compile Include="SinaService.svc.cs">
+      <DependentUpon>SinaService.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\oAuthSina\oAuthSina.csproj">
+      <Project>{407C3459-3EE2-4D28-BB68-0EFD84774040}</Project>
+      <Name>oAuthSina</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SinaAPI\SinaAPI.csproj">
+      <Project>{FE1591CE-8C62-4576-9D05-545942D29773}</Project>
+      <Name>SinaAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51443</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/SinaDesktop.Web</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,350 @@
+/* CSS Document 
+from  www.cssmoban.com
+*/
+
+*{
+margin:0px;
+padding:0px;
+}
+
+img{
+border:0px;
+}
+
+h1, h2, h3, h4, h5, h6 { line-height: normal; }
+
+.floatl{
+float:left;
+}
+
+.floatr{
+float:right;
+}
+
+.clear{
+clear:both;
+}
+
+body{
+background:#fff;
+font-family:Arial, Helvetica, sans-serif;
+font-size:13px;
+}	
+
+/* CONTAINER STARTS HERE */
+
+#container{
+width:900px;
+margin:auto;
+}
+
+/* HEADER STARTS HERE */
+
+.header{
+height:421px;
+background:url(../images/header-bg.jpg) bottom left no-repeat;
+}
+
+.logo{
+padding:29px 0px 0px 0px;
+}
+
+.top-links{
+background:url(../images/top-links-dotted-line.gif) top left repeat-x;
+margin-top:39px;
+}
+
+.top-links ul{
+list-style:none;
+}
+
+.top-links li{
+float:left;
+font-weight:bold;
+color:#a5a4a4;
+padding:0px 17px;
+}
+
+
+.top-links li a{
+text-decoration:none;
+color:#a5a4a4;
+line-height:30px;
+display:block;
+}
+
+.top-links li a:hover{
+color:#000;
+background:url(../images/hover-bullet.gif) top center no-repeat;
+}
+
+.top-links li a.active{
+color:#000;
+background:url(../images/hover-bullet.gif) top center no-repeat;
+}
+
+.info{
+width:405px;
+padding-right:35px;
+padding-top:80px;
+}
+
+.info h1{
+color:#8a8585;
+line-height:35px;
+font-size:28px;
+font-weight:normal;
+padding-bottom:15px;
+}
+
+.info p{
+color:#000;
+line-height:20px;
+padding-bottom:20px;
+}
+
+/* CONTENT BOX STARTS HERE */
+
+.content-box{
+width:900px;
+background:#f6f7f7 url(../images/content-box-bottom.gif) bottom left no-repeat;
+}
+
+.content-padding{
+padding:30px 16px 45px 16px;
+}
+
+.box-middle-bg{
+background:url(../images/box-middle-bg.gif) top left repeat-y;
+width:269px;
+margin-right:30px;
+margin-bottom:22px;
+}
+
+.box-top-bg{
+background:url(../images/box-top-bg.gif) top left no-repeat;
+width:269px;
+}
+
+.box-bottom-bg{
+background:url(../images/box-bottom-bg.gif) bottom left no-repeat;
+width:239px;
+padding:15px 15px 33px 15px;
+}
+
+.box-content{
+width:239px;
+text-align:center;
+}
+
+.box-content h1{
+font-size:28px;
+color:#000;
+font-weight:normal;
+padding-bottom:15px;
+}
+
+.box-content p{
+color:#9aa3b8;
+line-height:20px;
+padding:10px 0px;
+}
+
+/* LEFT COL STARTS HERE */
+
+.left-col{
+width:570px;
+}
+
+.main-content { line-height: 22px; width: 570px; color:#5e6e6c; }
+
+.main-content a { text-decoration: none; color: #000; font-weight: bold; }
+
+.main-content h2{
+font-size:20px;
+font-weight:normal;
+color: #000;
+padding-bottom: 20px;
+}
+
+.main-content span{
+font-weight:bold;
+color:#636e0f;
+}
+
+.main-content p { color:#5e6e6c; line-height: 20px; padding-top: 20px; }
+
+
+.service-section{
+width:570px;
+}
+
+.service-section img{
+padding-right:15px;
+position:relative;
+top:3px;
+}
+
+.service-section h2{
+font-size:20px;
+font-weight:normal;
+}
+
+.service-section span{
+font-weight:bold;
+color:#636e0f;
+}
+
+.service-section ul{
+width:242px;
+padding-top:20px;
+list-style:none;
+}
+
+.service-section li{
+background:url(../images/bullets.gif) left 10px no-repeat;
+padding-left:20px;
+line-height:25px;
+color:#000;
+}
+
+.service-section  li a{
+text-decoration:none;
+background:url(../images/dotted-line.gif) bottom left repeat-x;
+width:223px;
+display:block;
+color:#000;
+}
+
+.service-section  li a:hover{
+color:#000;
+text-decoration:underline;
+}
+
+/* RIGHT COL STARTS HERE */
+
+.right-col{
+width:268px;
+}
+
+.newsletter-section{
+width:234px;
+background:url(../images/newsletter-bg.gif) top left repeat-x;
+border:2px solid #b8bcbc;
+padding:15px;
+margin-top:7px;
+}
+
+.newsletter-section h2{
+font-size:20px;
+color:#fff;
+font-weight:normal;
+line-height:25px;
+background:url(../images/mail-icon.gif) top left no-repeat;
+padding-left:50px;
+padding-bottom:23px;
+}
+
+form.signup-area{
+width:234px;
+}
+
+.signup-area input.txtfield{
+width:181px;
+background:#f6f7f7;
+padding:4px 5px;
+margin-right:5px;
+float:left;
+border:0px;
+color:#afb3b3;
+font-size:11px;
+font-weight:bold;
+}
+
+.contact-section{
+background:#eceeee;
+border:1px solid #c2c7c7;
+padding:5px 15px 0px 15px;
+width:236px;
+height:47px;
+margin-top:25px;
+}
+
+.contact-section p{
+color:#000;
+background:url(../images/text-bg.gif) right 4px no-repeat;
+width:116px;
+height:40px;
+}
+
+.contact-section span{
+color:#000;
+font-size:20px;
+}
+
+.contact-section a{
+color:#670d26;
+font-weight:bold;
+text-decoration:none;
+padding-top:12px;
+}
+
+
+.contact-section img{
+padding-right:10px;
+}
+
+/* FOOTER STARTS HERE */
+
+.footer-links{
+width:900px;
+line-height:100px;
+}
+
+.footer-links ul{
+list-style:none;
+}
+
+.footer-links li{
+float:left;
+padding-right:7px;
+font-weight:bold;
+color:#989c9c;
+}
+
+.footer-links li a{
+text-decoration:none;
+color:#989c9c;
+}
+
+.footer-links p{
+color:#989c9c;
+font-weight:bold;
+}
+
+
+
+
+/* inner pages css start */
+/*h1{font:35px "Times New Roman", Times, serif ;margin:0px; color:#ffc850; font-weight:bold; padding:0px 0px 0 0px;}
+h1 span{color:#fff}*/
+.aboutus-img{float:right; border:4px solid #fff;	margin:0 0px 10px 20px;}
+h5{font:15px Tahoma, Arial, Helvetica, sans-serif; color:#636e0f; font-weight:bold; padding:0px 0px 5px 0px; border-bottom:1px dotted #000;	margin:0px 0px 10px 0px;}
+h6{font:15px Tahoma, Arial, Helvetica, sans-serif; color:#636e0f; font-weight:bold; padding:0px 0px 5px 0px; margin:0px 0px 10px 0px;}
+.aboutcolumnzone{padding:20px 0px 16px 0px;}
+.aboutcolumn1{width:48%; float:left; margin:0px 0px 10px 0px;}
+.aboutcolumn2{width:48%; float:right; margin:0px 0px 10px 0px;}
+.abouticon{float:left; margin:0px 20px 0px 0px;}
+.insidereadmore{padding:10px 0px 10px 0px;}
+input.button{color:#000; background:#ffc850; font:bold 11px Arial, Helvetica, sans-serif; text-decoration:none; padding:10px 10px; margin:0px 5px 5px 0;	border:1px solid #5b7a92;}
+input.button:hover{cursor:pointer; color:#fff; background:#663300; border:1px solid #ffc850;}
+.project-img{float:right; margin-left:20px;	border: 6px solid #000;}
+.whiteheading{font:30px Myriad Pro, Arial; color:#CBD76B; font-weight:100;	padding:0px; margin:25px 0px 20px 0px;}
+.ourprojectrow{margin-bottom:20px; border-bottom:1px dotted #000; padding-bottom:10px; padding-right:20px}
+.servicecolumnzone{padding:20px 0px 16px 0px;}
+.servicecolumn1{width:48%; float:left; margin:0px 0px 10px 0px;}
+.servicecolumn2{width:48%; float:right;	margin:0px 0px 10px 0px;}
+.blog-posted-row{padding:3px;}
+/* inner pages css ends */
+
+

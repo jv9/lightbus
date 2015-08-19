@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2b4afc7c-9c6c-4bb3-8f99-2cedd4ef7138" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/SinaDesktop.Web/SinaService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SinaService.xsd" MetadataType="Schema" ID="0b4d2c4e-26fc-4ce9-8ac5-b7b0a4d3a858" SourceId="1" SourceUrl="http://localhost/SinaDesktop.Web/SinaService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SinaService.disco" MetadataType="Disco" ID="b73d6ade-ea5c-4003-9993-467454b1b10f" SourceId="1" SourceUrl="http://localhost/SinaDesktop.Web/SinaService.svc?disco" />
+    <MetadataFile FileName="SinaService1.xsd" MetadataType="Schema" ID="77c40c05-55fc-4e49-8956-c362b14c6c38" SourceId="1" SourceUrl="http://localhost/SinaDesktop.Web/SinaService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SinaService.wsdl" MetadataType="Wsdl" ID="f039d778-96f9-4cda-aed7-5b79383dfc86" SourceId="1" SourceUrl="http://localhost/SinaDesktop.Web/SinaService.svc?wsdl" />
+    <MetadataFile FileName="SinaService2.xsd" MetadataType="Schema" ID="d7ed1c4e-3e27-431c-8d0c-3f9f0cfd7e9d" SourceId="1" SourceUrl="http://localhost/SinaDesktop.Web/SinaService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,31 @@
+﻿<controls:ChildWindow x:Class="SinaDesktop.Controls.MessageChildWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="400" Height="150" 
+           Style="{StaticResource GlobalSettingsChildWindowStyle}" HasCloseButton="False"
+           OverlayBrush="Transparent" OverlayOpacity="0.1">
+    <!--<controls:ChildWindow.Title>
+        <StackPanel Orientation="Horizontal" Margin="0,2">
+            <TextBlock VerticalAlignment="Center" x:Name="tbTitle"></TextBlock>
+        </StackPanel>
+    </controls:ChildWindow.Title>-->
+    
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="93*"/>
+                <ColumnDefinition Width="289*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="imageAlert" Source="" Grid.Column="0" Height="48" Width="48" VerticalAlignment="Center" HorizontalAlignment="Center" ></Image>
+            <TextBlock x:Name="tbMessage" Grid.Column="1" VerticalAlignment="Center" FontSize="16" />
+        </Grid>
+        
+        <!--<Button x:Name="CancelButton" Content="取消" Click="CancelButton_Click" Width="75" Height="25" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />-->
+        <Button x:Name="OKButton" Content="确定" Click="OKButton_Click" Width="75" Height="30" HorizontalAlignment="Center" Margin="0,12,0,0" Grid.Row="1" />
+    </Grid>
+</controls:ChildWindow>

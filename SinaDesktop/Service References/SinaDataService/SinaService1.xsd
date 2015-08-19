@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SinaDesktop.Web" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SinaDesktop.Web" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfTokenKeyCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TokenKeyCollection" nillable="true" type="tns:TokenKeyCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTokenKeyCollection" nillable="true" type="tns:ArrayOfTokenKeyCollection" />
+  <xs:complexType name="TokenKeyCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TokenKeySecretString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TokenKeyString" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TokenKeyCollection" nillable="true" type="tns:TokenKeyCollection" />
+  <xs:complexType name="UserList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataMemberObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BlogURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomizeImageURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Domain" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FavouriteCount" type="xs:int" />
+          <xs:element minOccurs="0" name="FollowerCount" type="xs:int" />
+          <xs:element minOccurs="0" name="FriendCount" type="xs:int" />
+          <xs:element minOccurs="0" name="FriendName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsEnableGeo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsFollowing" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsVerified" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Province" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StatusItems" nillable="true" type="tns:StatusList" />
+          <xs:element minOccurs="0" name="StatusesCount" type="xs:int" />
+          <xs:element minOccurs="0" name="TwitterName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserList" nillable="true" type="tns:UserList" />
+  <xs:complexType name="DataMemberObjectBase">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="DataMemberObjectBase" nillable="true" type="tns:DataMemberObjectBase" />
+  <xs:complexType name="StatusList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GeoRSS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFavorited" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsTruncated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MiddleImageURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OriginalImageURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReplyStatusID" type="xs:int" />
+      <xs:element minOccurs="0" name="ReplyTwitterName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReplyUserID" type="xs:int" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ThumbnailImageURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TwitterContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TwitterID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatusList" nillable="true" type="tns:StatusList" />
+  <xs:complexType name="ArrayOfFriendTimelineList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FriendTimelineList" nillable="true" type="tns:FriendTimelineList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFriendTimelineList" nillable="true" type="tns:ArrayOfFriendTimelineList" />
+  <xs:complexType name="FriendTimelineList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataMemberObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FriendTwitterContent" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FriendTwitterID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Geo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsFavorited" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsShowRetweet" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsShowThumbPic" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsTruncated" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MiddleSizePic" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginalSizePic" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReplyToScreenName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReplyToStatusID" type="xs:int" />
+          <xs:element minOccurs="0" name="ReplyToUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="RetweeterItem" nillable="true" type="tns:RetweeterList" />
+          <xs:element minOccurs="0" name="SourceURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ThumbnailPic" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsersItem" nillable="true" type="tns:UserList" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FriendTimelineList" nillable="true" type="tns:FriendTimelineList" />
+  <xs:complexType name="RetweeterList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataMemberObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreatedTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Geo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsFavorited" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsShowThumbPic" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsTruncated" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MiddleImageURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginalImageURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReplyStatusID" type="xs:int" />
+          <xs:element minOccurs="0" name="ReplyToScreenName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReplyUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="RetweeterContent" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RetweeterID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SourceURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ThumbnailImageURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsersItem" nillable="true" type="tns:UserList" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetweeterList" nillable="true" type="tns:RetweeterList" />
+  <xs:complexType name="ArrayOfFavoriteList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FavoriteList" nillable="true" type="tns:FavoriteList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFavoriteList" nillable="true" type="tns:ArrayOfFavoriteList" />
+  <xs:complexType name="FavoriteList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataMemberObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FriendTwitterContent" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FriendTwitterID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Geo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsFavorited" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsShowRetweet" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsShowThumbPic" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsTruncated" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MiddleSizePic" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginalSizePic" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReplyToScreenName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReplyToStatusID" type="xs:int" />
+          <xs:element minOccurs="0" name="ReplyToUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="RetweeterItem" nillable="true" type="tns:RetweeterList" />
+          <xs:element minOccurs="0" name="SourceURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ThumbnailPic" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsersItem" nillable="true" type="tns:UserList" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FavoriteList" nillable="true" type="tns:FavoriteList" />
+  <xs:complexType name="ArrayOfCommentTimelineList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CommentTimelineList" nillable="true" type="tns:CommentTimelineList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCommentTimelineList" nillable="true" type="tns:ArrayOfCommentTimelineList" />
+  <xs:complexType name="CommentTimelineList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataMemberObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CommentContent" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CommentID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StatusItem" nillable="true" type="tns:StatusList" />
+          <xs:element minOccurs="0" name="UsersItem" nillable="true" type="tns:UserList" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CommentTimelineList" nillable="true" type="tns:CommentTimelineList" />
+  <xs:complexType name="ArrayOfMentionList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MentionList" nillable="true" type="tns:MentionList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMentionList" nillable="true" type="tns:ArrayOfMentionList" />
+  <xs:complexType name="MentionList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataMemberObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FriendTwitterContent" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FriendTwitterID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Geo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsFavorited" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsShowRetweet" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsShowThumbPic" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsTruncated" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MiddleSizePic" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginalSizePic" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReplyToScreenName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReplyToStatusID" type="xs:int" />
+          <xs:element minOccurs="0" name="ReplyToUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="RetweeterItem" nillable="true" type="tns:RetweeterList" />
+          <xs:element minOccurs="0" name="SourceURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ThumbnailPic" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsersItem" nillable="true" type="tns:UserList" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MentionList" nillable="true" type="tns:MentionList" />
+  <xs:complexType name="ArrayOfDirectMessageList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DirectMessageList" nillable="true" type="tns:DirectMessageList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDirectMessageList" nillable="true" type="tns:ArrayOfDirectMessageList" />
+  <xs:complexType name="DirectMessageList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataMemberObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DirectMessageContent" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DirectMessageID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RecipientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RecipientScreenName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RecipientUsersItem" nillable="true" type="tns:UserList" />
+          <xs:element minOccurs="0" name="SenderID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderScreenName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderUsersItem" nillable="true" type="tns:UserList" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DirectMessageList" nillable="true" type="tns:DirectMessageList" />
+  <xs:complexType name="UnreadMessageList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataMemberObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CommentCount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DirectMessageCount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FollowerCount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsNewStatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MentionCount" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UnreadMessageList" nillable="true" type="tns:UnreadMessageList" />
+  <xs:complexType name="ArrayOfEmotionList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmotionList" nillable="true" type="tns:EmotionList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmotionList" nillable="true" type="tns:ArrayOfEmotionList" />
+  <xs:complexType name="EmotionList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataMemberObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmotionURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsCommon" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsHot" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phrase" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmotionList" nillable="true" type="tns:EmotionList" />
+  <xs:complexType name="ArrayOfFollowerList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FollowerList" nillable="true" type="tns:FollowerList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFollowerList" nillable="true" type="tns:ArrayOfFollowerList" />
+  <xs:complexType name="FollowerList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataMemberObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NextCursor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PreviewCursor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Users" nillable="true" type="tns:ArrayOfUserList" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FollowerList" nillable="true" type="tns:FollowerList" />
+  <xs:complexType name="ArrayOfUserList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserList" nillable="true" type="tns:UserList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserList" nillable="true" type="tns:ArrayOfUserList" />
+</xs:schema>

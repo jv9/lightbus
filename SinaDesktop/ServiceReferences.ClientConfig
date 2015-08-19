@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <customBinding>
+                <binding name="CustomBinding_IDataService">
+                    <binaryMessageEncoding />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+            </customBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost/SinaDesktop.Web/SinaService.svc"
+                binding="customBinding" bindingConfiguration="CustomBinding_IDataService"
+                contract="SinaDataService.IDataService" name="CustomBinding_IDataService" />
+        </client>
+    </system.serviceModel>
+</configuration>

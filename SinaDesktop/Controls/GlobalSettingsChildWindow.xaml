@@ -1,0 +1,62 @@
+﻿<controls:ChildWindow x:Class="SinaDesktop.Controls.GlobalSettingsChildWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:inputtoolkits="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"
+           Width="400" Height="600" x:Name="globalSettingsChildWindow"
+           Style="{StaticResource GlobalSettingsChildWindowStyle}" 
+           HasCloseButton="False" OverlayBrush="Transparent" OverlayOpacity="0.1">
+    <controls:ChildWindow.Title>
+        <StackPanel Orientation="Vertical" >
+            <HyperlinkButton x:Name="hbBack" IsTabStop="False" Width="52" VerticalAlignment="Top" Opacity=".5" 
+                             HorizontalAlignment="Left"  Margin="-30,-32,0,0" Click="hbBack_Click" MouseEnter="HyperLinkButton_MouseEnter" MouseLeave="HyperLinkButton_MouseLeave" TabIndex="99">
+                <Image x:Name="imageTitle" Source="/SinaDesktop;component/Images/backButton.png" Width="48" Height="48" 
+                       Stretch="Uniform" HorizontalAlignment="Left"
+                       VerticalAlignment="top"/>
+            </HyperlinkButton>
+            
+            <TextBlock VerticalAlignment="Center" Text="系统设置" FontSize="18" x:Name="tbTitle"/>
+        </StackPanel>
+    </controls:ChildWindow.Title>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <StackPanel Orientation="Vertical" Margin="20,2">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="微博更新时间：" FontSize="14" VerticalAlignment="Center"/>
+                <inputtoolkits:NumericUpDown x:Name="numUpdateTimer" Height="28" Width="100" Minimum="30" Value="60" FontSize="16" Maximum="200" Increment="10"/>
+                <TextBlock Text="(秒)" FontSize="14" VerticalAlignment="Center" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"  Margin="10">
+                <TextBlock Text="气泡提示时间：" FontSize="14" VerticalAlignment="Center"/>
+                <inputtoolkits:NumericUpDown x:Name="numNotificationTimer" Height="28" Width="100" Minimum="5000" FontSize="16" Maximum="30000" Increment="100"/>
+                <TextBlock Text="(毫秒)" FontSize="14" VerticalAlignment="Center" />
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <CheckBox Content="运行时自动更新最新版本" Margin="10,10,10,5" FontSize="14" x:Name="chkAutoUpdate" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                <Button Content="检测最新版本" Margin="10,5" Width="120" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"  x:Name="btAutoUpdate" Click="btAutoUpdate_Click"/>
+            </StackPanel>
+
+            <CheckBox Content="运行时自动登陆" Margin="10,10,10,5" FontSize="14" x:Name="chkAutoLogin" VerticalAlignment="Center" HorizontalAlignment="Left"  />
+
+            <CheckBox Content="新微博气泡提示" Margin="10,10,10,5" FontSize="14" x:Name="chkDisableNotification" VerticalAlignment="Center" HorizontalAlignment="Left"  />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1" Margin="20,2">
+            <TextBlock Text="关于客户端" FontSize="18"></TextBlock>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="版本 " />
+                <TextBlock x:Name="tbVersion" />
+            </StackPanel>
+            
+        </StackPanel>
+
+        <Button x:Name="CancelButton" Content="取消" Click="CancelButton_Click" Width="75" Height="30" HorizontalAlignment="Left" Margin="79,12,0,0" Grid.Row="2" />
+        <Button x:Name="OKButton" Content="保存设置" Click="OKButton_Click" Width="75" Height="30" HorizontalAlignment="Left" Margin="0,12,0,0" TabIndex="0" Grid.Row="2" />
+    </Grid>
+</controls:ChildWindow>

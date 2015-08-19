@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SinaService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_IDataService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/SinaDesktop.Web/SinaService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/SinaDesktop.Web/SinaService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/SinaDesktop.Web/SinaService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SinaDesktop.Web" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDataService_GetToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetToken" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_VerifyCredentials_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyCredentials" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_VerifyCredentials_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyCredentialsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetFriendTimeline_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFriendTimeline" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetFriendTimeline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFriendTimelineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetFavorites_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavorites" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetFavorites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoritesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetCommentTimeline_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentTimeline" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetCommentTimeline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentTimelineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UpdateStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStatus" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UpdateStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UploadHttpWebRequestByoAuth_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadHttpWebRequestByoAuth" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UploadHttpWebRequestByoAuth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadHttpWebRequestByoAuthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetMentions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMentions" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetMentions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMentionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetDirectMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectMessages" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetDirectMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetUnreaderMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnreaderMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetUnreaderMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnreaderMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UpdateCommentByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCommentByID" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_UpdateCommentByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCommentByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_RepostStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:RepostStatus" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_RepostStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RepostStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_CreateFavorite_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFavorite" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_CreateFavorite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFavoriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_DeleteFavorite_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFavorite" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_DeleteFavorite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFavoriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetEmotions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmotions" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetEmotions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmotionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_CreateFriendships_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFriendships" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_CreateFriendships_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFriendshipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetUserTimeline_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTimeline" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetUserTimeline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTimelineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetUserProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetUserProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetCommentsTimelineByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentsTimelineByID" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetCommentsTimelineByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentsTimelineByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_ResetCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetCount" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_ResetCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_Status_ReplyComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:Status_ReplyComment" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_Status_ReplyComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Status_ReplyCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetFollower_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFollower" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetFollower_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFollowerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_Status_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Status_Delete" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_Status_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Status_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDataService">
+    <wsdl:operation name="GetToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetToken" message="tns:IDataService_GetToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetTokenResponse" message="tns:IDataService_GetToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyCredentials">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/VerifyCredentials" message="tns:IDataService_VerifyCredentials_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/VerifyCredentialsResponse" message="tns:IDataService_VerifyCredentials_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFriendTimeline">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetFriendTimeline" message="tns:IDataService_GetFriendTimeline_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetFriendTimelineResponse" message="tns:IDataService_GetFriendTimeline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFavorites">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetFavorites" message="tns:IDataService_GetFavorites_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetFavoritesResponse" message="tns:IDataService_GetFavorites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentTimeline">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetCommentTimeline" message="tns:IDataService_GetCommentTimeline_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetCommentTimelineResponse" message="tns:IDataService_GetCommentTimeline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/UpdateStatus" message="tns:IDataService_UpdateStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/UpdateStatusResponse" message="tns:IDataService_UpdateStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadHttpWebRequestByoAuth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/UploadHttpWebRequestByoAuth" message="tns:IDataService_UploadHttpWebRequestByoAuth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/UploadHttpWebRequestByoAuthResponse" message="tns:IDataService_UploadHttpWebRequestByoAuth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMentions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetMentions" message="tns:IDataService_GetMentions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetMentionsResponse" message="tns:IDataService_GetMentions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetDirectMessages" message="tns:IDataService_GetDirectMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetDirectMessagesResponse" message="tns:IDataService_GetDirectMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnreaderMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetUnreaderMessage" message="tns:IDataService_GetUnreaderMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetUnreaderMessageResponse" message="tns:IDataService_GetUnreaderMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCommentByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/UpdateCommentByID" message="tns:IDataService_UpdateCommentByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/UpdateCommentByIDResponse" message="tns:IDataService_UpdateCommentByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RepostStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/RepostStatus" message="tns:IDataService_RepostStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/RepostStatusResponse" message="tns:IDataService_RepostStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFavorite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/CreateFavorite" message="tns:IDataService_CreateFavorite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/CreateFavoriteResponse" message="tns:IDataService_CreateFavorite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFavorite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/DeleteFavorite" message="tns:IDataService_DeleteFavorite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/DeleteFavoriteResponse" message="tns:IDataService_DeleteFavorite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmotions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetEmotions" message="tns:IDataService_GetEmotions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetEmotionsResponse" message="tns:IDataService_GetEmotions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFriendships">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/CreateFriendships" message="tns:IDataService_CreateFriendships_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/CreateFriendshipsResponse" message="tns:IDataService_CreateFriendships_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTimeline">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetUserTimeline" message="tns:IDataService_GetUserTimeline_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetUserTimelineResponse" message="tns:IDataService_GetUserTimeline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetUserProfile" message="tns:IDataService_GetUserProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetUserProfileResponse" message="tns:IDataService_GetUserProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentsTimelineByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetCommentsTimelineByID" message="tns:IDataService_GetCommentsTimelineByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetCommentsTimelineByIDResponse" message="tns:IDataService_GetCommentsTimelineByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/ResetCount" message="tns:IDataService_ResetCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/ResetCountResponse" message="tns:IDataService_ResetCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Status_ReplyComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/Status_ReplyComment" message="tns:IDataService_Status_ReplyComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/Status_ReplyCommentResponse" message="tns:IDataService_Status_ReplyComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFollower">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetFollower" message="tns:IDataService_GetFollower_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetFollowerResponse" message="tns:IDataService_GetFollower_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Status_Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/Status_Delete" message="tns:IDataService_Status_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/Status_DeleteResponse" message="tns:IDataService_Status_Delete_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomBinding_IDataService" type="tns:IDataService">
+    <wsp:PolicyReference URI="#CustomBinding_IDataService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetToken">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/GetToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyCredentials">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/VerifyCredentials" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFriendTimeline">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/GetFriendTimeline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavorites">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/GetFavorites" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentTimeline">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/GetCommentTimeline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatus">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/UpdateStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadHttpWebRequestByoAuth">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/UploadHttpWebRequestByoAuth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMentions">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/GetMentions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectMessages">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/GetDirectMessages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnreaderMessage">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/GetUnreaderMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCommentByID">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/UpdateCommentByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepostStatus">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/RepostStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFavorite">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/CreateFavorite" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFavorite">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/DeleteFavorite" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmotions">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/GetEmotions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFriendships">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/CreateFriendships" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTimeline">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/GetUserTimeline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfile">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/GetUserProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentsTimelineByID">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/GetCommentsTimelineByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetCount">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/ResetCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Status_ReplyComment">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/Status_ReplyComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFollower">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/GetFollower" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Status_Delete">
+      <soap12:operation soapAction="http://tempuri.org/IDataService/Status_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SinaService">
+    <wsdl:port name="CustomBinding_IDataService" binding="tns:CustomBinding_IDataService">
+      <soap12:address location="http://localhost/SinaDesktop.Web/SinaService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/SinaDesktop.Web/SinaService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

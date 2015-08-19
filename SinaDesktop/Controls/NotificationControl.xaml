@@ -1,0 +1,155 @@
+﻿<UserControl x:Class="SinaDesktop.Controls.NotificationControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:LocalControls="clr-namespace:SinaDesktop.Controls"
+    mc:Ignorable="d"
+    d:DesignHeight="100" d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <Style x:Key="FluidItemsControlItemStyle"
+               TargetType="LocalControls:FluidItemsControlItem">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="LocalControls:FluidItemsControlItem">
+                        <ContentPresenter x:Name="contentPresenter"
+                    		ContentTemplate="{TemplateBinding ContentTemplate}"
+                    		Content="{TemplateBinding Content}"
+                    		HorizontalAlignment="Stretch" Opacity="0">
+                            <ContentPresenter.Projection>
+                                <PlaneProjection RotationX="90" CenterOfRotationX="0" CenterOfRotationY="0"/>
+                            </ContentPresenter.Projection>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="LayoutStates">
+                                    <VisualState x:Name="BeforeLoaded"/>
+                                    <VisualState x:Name="AfterLoaded">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="contentPresenter">
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="90"/>
+                                                <EasingDoubleKeyFrame KeyTime="0:0:1.2"
+                                                                      Value="0">
+                                                    <EasingDoubleKeyFrame.EasingFunction>
+                                                        <ElasticEase EasingMode="EaseOut"
+                                                                     Oscillations="1"
+                                                                     Springiness="2" />
+                                                    </EasingDoubleKeyFrame.EasingFunction>
+                                                </EasingDoubleKeyFrame>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimation BeginTime="0:0:0.4" Duration="0:0:0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="contentPresenter" d:IsOptimized="True"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="BeforeUnloaded"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </ContentPresenter>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="HtmlTextBlockStyle" TargetType="LocalControls:HtmlTextBlock">
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="#FFFFFFFF"/>
+            <Setter Property="Foreground" Value="#FF000000"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                        <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                        <GradientStop Color="#FF718597" Offset="0.375"/>
+                        <GradientStop Color="#FF617584" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="LocalControls:HtmlTextBlock">
+                        <Grid x:Name="RootElement">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0" To="#FF99C1E2" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" Storyboard.TargetName="MouseOverBorder"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="DisabledVisualElement"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="ReadOnly"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualElement"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unfocused">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualElement"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="1" Opacity="1">
+                                <Border x:Name="MouseOverBorder" BorderBrush="Transparent" BorderThickness="1">
+                                    <ScrollViewer x:Name="ContentElement" BorderThickness="0" IsTabStop="False" Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}"/>
+                                </Border>
+                            </Border>
+                            <Border x:Name="DisabledVisualElement" BorderBrush="#A5F7F7F7" BorderThickness="{TemplateBinding BorderThickness}" Background="#A5F7F7F7" IsHitTestVisible="False" Opacity="0"/>
+                            <Border x:Name="FocusVisualElement" BorderBrush="#FF6DBDD1" BorderThickness="{TemplateBinding BorderThickness}" IsHitTestVisible="False" Margin="1" Opacity="0"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="White" MouseLeftButtonDown="LayoutRoot_MouseLeftButtonDown" MouseLeave="LayoutRoot_MouseLeave" MouseMove="LayoutRoot_MouseMove">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--<Rectangle Fill="#FF119EDA" />-->
+        <ProgressBar x:Name="pbProgress" Value="25" Maximum="400" Width="400" BorderBrush="White" Style="{StaticResource CustomizeProgressBarStyle}"/>
+
+        <Grid Grid.Column="1" Grid.Row="1" Margin="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="*" />
+                <!--<RowDefinition Height="25" />-->
+            </Grid.RowDefinitions>
+
+            <Border BorderThickness="1" Grid.RowSpan="2" VerticalAlignment="Top" BorderBrush="DarkGray" Margin="0,2" Width="50" Height="50">
+                <Image x:Name="imgFriendPic" Width="48" VerticalAlignment="Top" Margin="2" />
+            </Border>
+            <!--Foreground="#FF58C3FD" FontFamily="Segoe UI Light, Lucida Sans Unicode, Verdana" -->
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="2">
+                <TextBlock x:Name="tbFriendName" FontSize="13" Foreground="#FF58C3FD" FontFamily="Segoe UI, Lucida Sans Unicode, Verdana"/>
+                <Image x:Name="imgVerify" Source="/SinaDesktop;component/Images/verify.png" Width="14" Margin="0" ></Image>
+            </StackPanel>
+            
+            <!--<TextBlock Grid.Row="1" x:Name="tbMessageText" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="340" Height="68" Margin="2,0,5,5" FontSize="12"/>-->
+            <LocalControls:HtmlTextBlock x:Name="tbMessageText" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                                            FontSize="12" Width="340" Height="72" Margin="2" TextWrapping="Wrap"
+                                                            Style="{StaticResource HtmlTextBlockStyle}" Foreground="Black"/>
+            <HyperlinkButton Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" 
+                             HorizontalAlignment="Right" Name="CloseButton" Click="CloseButton_Click" 
+                             Opacity=".5" MouseEnter="HyperLinkButton_MouseEnter" MouseLeave="HyperLinkButton_MouseLeave">
+                <Image Source="/SinaDesktop;component/Images/closeButton.png" Width="12" />
+                <ToolTipService.ToolTip>
+                    <ToolTip Margin="0,15,0,0" Content="关闭"/>
+                </ToolTipService.ToolTip>
+            </HyperlinkButton>
+        </Grid>
+    </Grid>
+</UserControl>
