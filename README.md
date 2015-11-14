@@ -54,32 +54,26 @@ QQ群：
 
 迷你模式,简单明了
 
-
+![Alt text](http://i67.tinypic.com/2ljky9s.jpg "Mini mode")
 
   
 
 实时提醒,轻松记录微生活
+![Alt text](http://i68.tinypic.com/148fz1y.jpg "Notify")
 
-
+![Alt text](http://i68.tinypic.com/j9ngra.jpg "Notify")
 
 自定义个性化设置
+![Alt text](http://i66.tinypic.com/2n0lkl3.jpg "Customize")
 
+![Alt text](http://i63.tinypic.com/2nhhpif.jpg "Customize")
 
-
- 
-
-
-
- 
-
-
-
- 
+![Alt text](http://i67.tinypic.com/33a76u1.jpg "Customize")
 
 便捷发布微博，记录点滴生活
 
 
-
+![Alt text](http://i67.tinypic.com/34plwnl.jpg "Weibo")
   
 
 更多功能期待您来发现...
