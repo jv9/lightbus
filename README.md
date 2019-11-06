@@ -1,3 +1,5 @@
+![lightbuslogo](https://user-images.githubusercontent.com/1653553/68267484-d10cae00-000f-11ea-9a3f-99a77ea0e42a.png)
+
 LightBus是基于微软Silverlight Out-of-Browser技术的微博客户端可支持多帐号同时登录；多变界面,设计简约,默认模式,内容丰富,全屏浏览,一眼望穿；迷你模式,简单瘦身；快捷消息发布,消息实时提醒,随时记录,随时关注；个性化自定义设计。
 
 项目分为两个版本：
@@ -32,32 +34,29 @@ http://kevinfan.blog.51cto.com/
 
 全屏浏览,一眼望穿
 
-![Alt text](http://i67.tinypic.com/2i0rcl2.jpg "Overview")
-
-  
+![1](https://user-images.githubusercontent.com/1653553/68267475-d0741780-000f-11ea-8849-2bf9e26244a1.jpg)
 
 迷你模式,简单明了
 
-![Alt text](http://i67.tinypic.com/2ljky9s.jpg "Mini mode")
-
+![2](https://user-images.githubusercontent.com/1653553/68267476-d0741780-000f-11ea-8f95-cbc1815b4d64.jpg)
 
 实时提醒,轻松记录微生活
 
-![Alt text](http://i68.tinypic.com/148fz1y.jpg "Notify")
+![3](https://user-images.githubusercontent.com/1653553/68267477-d0741780-000f-11ea-9665-a61e0970d6e5.jpg)
 
-![Alt text](http://i68.tinypic.com/j9ngra.jpg "Notify")
+![4](https://user-images.githubusercontent.com/1653553/68267479-d0741780-000f-11ea-916c-9f52914db1f1.jpg)
 
 自定义个性化设置
 
-![Alt text](http://i66.tinypic.com/2n0lkl3.jpg "Customize")
+![5](https://user-images.githubusercontent.com/1653553/68267480-d0741780-000f-11ea-89a6-db272820a651.jpg)
 
-![Alt text](http://i63.tinypic.com/2nhhpif.jpg "Customize")
+![6](https://user-images.githubusercontent.com/1653553/68267481-d10cae00-000f-11ea-8fe7-212fd7079b12.jpg)
 
-![Alt text](http://i67.tinypic.com/33a76u1.jpg "Customize")
+![7](https://user-images.githubusercontent.com/1653553/68267482-d10cae00-000f-11ea-8030-252fd5a7c3db.jpg)
 
 便捷发布微博，记录点滴生活
 
-![Alt text](http://i67.tinypic.com/34plwnl.jpg "Weibo")
+![8](https://user-images.githubusercontent.com/1653553/68267483-d10cae00-000f-11ea-88ad-82815d96e695.jpg)
   
 
 更多功能期待您来发现...
